@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "Control YouTube content restrictions via HTTP headers",
   "scripts": {
-    "build": "npm run build:chrome && npm run build:firefox",
     "build:chrome": "set TARGET_BROWSER=chrome && webpack --mode production",
     "build:firefox": "set TARGET_BROWSER=firefox && webpack --mode production",
     "dev": "webpack --mode development --watch",
     "dev:chrome": "set TARGET_BROWSER=chrome && webpack --mode development --watch",
-    "dev:firefox": "set TARGET_BROWSER=firefox && webpack --mode development --watch",
-    "prepare": "npm run build"
+    "dev:firefox": "set TARGET_BROWSER=firefox && webpack --mode development --watch"
   },
   "dependencies": {
     "webextension-polyfill": "^0.12.0"
