@@ -48,7 +48,7 @@ jobs:
           body: |
             Automatic release for build ${{ github.run_number }}
             
-            ### Changes
+            ### Commit Message
             ${{ github.event.head_commit.message }}
           draft: true
           prerelease: false
