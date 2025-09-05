@@ -2,6 +2,12 @@
 
 A browser extension that allows you to control YouTube's content restrictions by injecting the appropriate HTTP headers.
 
+## Screenshots
+<img width="1917" height="1003" alt="image" src="https://github.com/user-attachments/assets/76be3cea-5be5-4afb-b00c-2c1e4e333164" />
+<img width="1919" height="1002" alt="image" src="https://github.com/user-attachments/assets/9e79e6ad-2927-499c-b7df-c551c02c6519" />
+<img width="1919" height="1004" alt="image" src="https://github.com/user-attachments/assets/11962238-a673-4c8f-b334-573a282bd593" />
+
+
 ## Features
 
 - Set YouTube restriction level to None, Moderate, or Strict
