@@ -28,16 +28,24 @@ jobs:
 
       - name: Zip Chrome extension
         run: |
-          cd dist
-          zip -r ../chrome-extension.zip ./*
+          mkdir -p dist-chrome
+          cp -r dist/* dist-chrome/
+          cd dist-chrome
+          zip -r ../../chrome-extension.zip ./*
+          cd ..
+          rm -rf dist-chrome
 
       - name: Build Firefox extension
         run: npm run build:firefox
 
       - name: Zip Firefox extension
         run: |
-          cd dist
-          zip -r ../firefox-extension.zip ./*
+          mkdir -p dist-firefox
+          cp -r dist/* dist-firefox/
+          cd dist-firefox
+          zip -r ../../firefox-extension.zip ./*
+          cd ..
+          rm -rf dist-firefox
 
       - name: Create Release
         id: create_release
