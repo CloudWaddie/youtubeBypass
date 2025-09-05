@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Restriction Manager",
+  "version": "1.0",
+  "description": "Control YouTube content restrictions via HTTP headers",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-restriction-manager@example.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs",
+    "*://*.youtube.com/*",
+    "*://youtubei.googleapis.com/*",
+    "*://youtube.googleapis.com/*",
+    "*://*.youtube-nocookie.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "browser-polyfill.js",
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "96": "icons/icon48.png"
+  }
+}
