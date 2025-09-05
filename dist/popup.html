@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Restriction Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Restrictions</h1>
+    <div class="toggle-container">
+      <div class="toggle-option" data-value="none">
+        <span>None</span>
+        <div class="toggle-button"></div>
+      </div>
+      <div class="toggle-option" data-value="moderate">
+        <span>Moderate</span>
+        <div class="toggle-button"></div>
+      </div>
+      <div class="toggle-option" data-value="strict">
+        <span>Strict</span>
+        <div class="toggle-button"></div>
+      </div>
+    </div>
+    <div class="status">Current: <span id="currentStatus">Loading...</span></div>
+    <button id="testPageBtn" class="test-page-btn">Open Test Page</button>
+  </div>
+  <script src="browser-polyfill.js"></script>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
