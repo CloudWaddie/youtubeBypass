@@ -26,7 +26,7 @@ jobs:
       - name: Zip Chrome extension
         run: |
           cd dist
-          zip -r chrome-extension.zip ./*
+          zip -r ../chrome-extension.zip ./*
 
       - name: Build Firefox extension
         run: npm run build:firefox
@@ -34,7 +34,7 @@ jobs:
       - name: Zip Firefox extension
         run: |
           cd dist
-          zip -r firefox-extension.zip ./*
+          zip -r ../firefox-extension.zip ./*
 
       - name: Create Release
         id: create_release
@@ -50,7 +50,9 @@ jobs:
           draft: true
           prerelease: false
           files: |
-            chrome-extension.zip
-            firefox-extension.zip
+            ./chrome-extension.zip
+            ./firefox-extension.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        permissions:
+          contents: write
